@@ -7,7 +7,7 @@ namespace Lab1
         static void Main()
         {
             Console.WriteLine("Lab 1 Assignment by Alexander Harmaty");
-            Console.WriteLine("03/06/2022\n");
+            Console.WriteLine("02/06/2022\n");
 
             bool loop = true;
             while(loop)
@@ -21,7 +21,8 @@ namespace Lab1
                     "(3) Enter a string of numbers.  Display the entered number followed by its reverse.\n" +
                     "(4) Enter a password string.    Validate if string follows password character requirements.\n" +
                     "(5) Thoughts about Lab 1.\n" +
-                    "-------------------------\n");
+                    "(6) Exit Program!\n" +
+                    "-----------------\n");
 
                 Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
 
@@ -31,24 +32,21 @@ namespace Lab1
                 {
                     case 1:
                         Console.WriteLine("User has selected (1)!\n");
-                        Console.WriteLine("" +
+                        Console.WriteLine("----------------------\n" +
                             "To display the triangle, the user must:\n" +
-                            "enter a character to form the triangle,\n" +
-                            "AND\n" +
-                            "enter an integer for the size of the triangle...\n");
+                            "\tenter a character to form the triangle,\n" +
+                            "\tAND\n" +
+                            "\tenter an integer for the size of the triangle...\n");
 
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
-                        char character;
-                        character = Console.ReadLine()[0];
+                        char character = Console.ReadLine()[0];
 
                         Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
-                        
                         int numOfLines = int.Parse(Console.ReadLine());
-                                                
-                        int count = numOfLines - 1;
-
+                        
                         //Output pattern
                         int i, j;
+                        int count = numOfLines - 1;
                         for (i = 1; i <= numOfLines; i++)
                         {
                             for (j = 1; j <= count; j++)
@@ -80,6 +78,13 @@ namespace Lab1
 
                         break;
 
+                    case 6:
+
+                        Console.WriteLine("User has selected (6)!\nEnd Of Program.");
+                        Console.WriteLine("--------------------------------------------------------------------------------------------");
+                        loop = false;
+
+                        break;
                 }
             }
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AlexH\\Documents\\C# Projects\\Lab1\\Lab1\\Lab1.csproj": {}
+    "C:\\Users\\Alexander\\Documents\\[School]\\FSC Spring 2022\\BCS426-Lab1\\Lab1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AlexH\\Documents\\C# Projects\\Lab1\\Lab1\\Lab1.csproj": {
+    "C:\\Users\\Alexander\\Documents\\[School]\\FSC Spring 2022\\BCS426-Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AlexH\\Documents\\C# Projects\\Lab1\\Lab1\\Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\Documents\\[School]\\FSC Spring 2022\\BCS426-Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "C:\\Users\\AlexH\\Documents\\C# Projects\\Lab1\\Lab1\\Lab1.csproj",
-        "packagesPath": "C:\\Users\\AlexH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AlexH\\Documents\\C# Projects\\Lab1\\Lab1\\obj\\",
+        "projectPath": "C:\\Users\\Alexander\\Documents\\[School]\\FSC Spring 2022\\BCS426-Lab1\\Lab1.csproj",
+        "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexander\\Documents\\[School]\\FSC Spring 2022\\BCS426-Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\AlexH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
