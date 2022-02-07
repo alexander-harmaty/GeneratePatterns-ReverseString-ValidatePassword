@@ -31,38 +31,91 @@ namespace Lab1
                 switch(choice)
                 {
                     case 1:
+                        //UX Instructions
                         Console.WriteLine("User has selected (1)!\n");
                         Console.WriteLine("----------------------\n" +
                             "To display the triangle, the user must:\n" +
-                            "\tenter a character to form the triangle,\n" +
+                            "\tenter a character to form the triangle with,\n" +
                             "\tAND\n" +
                             "\tenter an integer for the size of the triangle...\n");
 
+                        //Input
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
-                        char character = Console.ReadLine()[0];
-
-                        Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
-                        int numOfLines = int.Parse(Console.ReadLine());
+                        char character1 = Console.ReadLine()[0];
                         
-                        //Output pattern
-                        int i, j;
-                        int count = numOfLines - 1;
-                        for (i = 1; i <= numOfLines; i++)
+                        Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
+                        int numOfLines1 = int.Parse(Console.ReadLine());
+
+                        //Output
+                        Console.WriteLine("----------------------\nResults:\n\n");
+
+                        int count1 = numOfLines1 - 1;
+
+                        for (int i = 1; i <= numOfLines1; i++)
                         {
-                            for (j = 1; j <= count; j++)
+                            for (int j = 1; j <= count1; j++)
                                 Console.Write(" ");
 
-                            count--;
+                            count1--;
 
-                            for (j = 1; j <= 2 * i - 1; j++)
-                                Console.Write(character);
+                            for (int j = 1; j <= 2 * i - 1; j++)
+                                Console.Write(character1);
 
                             Console.WriteLine();
                         }
+                        Console.WriteLine("");
 
                         break;
 
                     case 2:
+                        //UX Instructions
+                        Console.WriteLine("User has selected (2)!\n");
+                        Console.WriteLine("----------------------\n" +
+                            "To display the diamond, the user must:\n" +
+                            "\tenter a character to form the diamond with,\n" +
+                            "\tAND\n" +
+                            "\tenter an integer for the half-point size of the diamond...\n");
+
+                        //Input
+                        Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
+                        char character2 = Console.ReadLine()[0];
+                        
+                        Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
+                        int numOfLines2 = int.Parse(Console.ReadLine());
+
+                        //Output
+                        Console.WriteLine("----------------------\nResults:\n\n");
+
+                        int count2;
+
+                        count2 = numOfLines2 - 1;
+                        
+                        for (int i = 1; i<= numOfLines2; i++)
+                        {
+                            for (int j = 1; j <= count2; j++)
+                                Console.Write(" ");
+
+                            count2--;
+
+                            for (int j = 1; j <= 2 * i - 1; j++)
+                                Console.Write(character2);
+
+                            Console.WriteLine();
+                        }
+                        
+                        count2 = 1;
+                        for (int i = 1; i<= numOfLines2; i++)
+                        {
+                            for (int j = 1; j<= count2; j++)
+                                Console.Write(" ");
+
+                            count2++;
+
+                            for (int j = 1; j <= 2 * (numOfLines2 - i) - 1; j++)
+                                Console.Write(character2);
+
+                            Console.WriteLine();
+                        }
 
                         break;
 
