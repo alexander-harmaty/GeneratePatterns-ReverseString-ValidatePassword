@@ -31,6 +31,10 @@ namespace Lab1
                 switch(choice)
                 {
                     case 1:
+                        char character1;
+                        int numOfLines1;
+                        int count1;
+
                         //UX Instructions
                         Console.WriteLine("User has selected (1)!\n");
                         Console.WriteLine("----------------------\n" +
@@ -41,15 +45,15 @@ namespace Lab1
 
                         //Input
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
-                        char character1 = Console.ReadLine()[0];
+                        character1 = Console.ReadLine()[0];
                         
                         Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
-                        int numOfLines1 = int.Parse(Console.ReadLine());
+                        numOfLines1 = int.Parse(Console.ReadLine());
 
                         //Output
                         Console.WriteLine("----------------------\nResults:\n\n");
 
-                        int count1 = numOfLines1 - 1;
+                        count1 = numOfLines1 - 1;
 
                         for (int i = 1; i <= numOfLines1; i++)
                         {
@@ -63,11 +67,16 @@ namespace Lab1
 
                             Console.WriteLine();
                         }
+
                         Console.WriteLine("");
 
                         break;
 
                     case 2:
+                        char character2;
+                        int numOfLines2;
+                        int count2;
+
                         //UX Instructions
                         Console.WriteLine("User has selected (2)!\n");
                         Console.WriteLine("----------------------\n" +
@@ -78,15 +87,13 @@ namespace Lab1
 
                         //Input
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
-                        char character2 = Console.ReadLine()[0];
+                        character2 = Console.ReadLine()[0];
                         
                         Console.WriteLine("Please type an integer, then press 'enter' to select your choice...");
-                        int numOfLines2 = int.Parse(Console.ReadLine());
+                        numOfLines2 = int.Parse(Console.ReadLine());
 
                         //Output
                         Console.WriteLine("----------------------\nResults:\n\n");
-
-                        int count2;
 
                         count2 = numOfLines2 - 1;
                         
@@ -104,6 +111,7 @@ namespace Lab1
                         }
                         
                         count2 = 1;
+
                         for (int i = 1; i<= numOfLines2; i++)
                         {
                             for (int j = 1; j<= count2; j++)
@@ -120,6 +128,9 @@ namespace Lab1
                         break;
 
                     case 3:
+                        int num;
+                        string mirror;
+
                         //UX Instructions
                         Console.WriteLine("User has selected (3)!\n");
                         Console.WriteLine("----------------------\n" +
@@ -128,14 +139,14 @@ namespace Lab1
 
                         //Input
                         Console.WriteLine("Please type an integer, then press 'enter' to select your choice... ");
-                        int num = Convert.ToInt32(Console.ReadLine());
+                        num = Convert.ToInt32(Console.ReadLine());
 
                         //Output
-                        string mirror = "" + num;
+                        mirror = "" + num;
 
                         while (num > 0)
                         {
-                            mirror += (num % 10);
+                            mirror += num % 10;
                             num /= 10;
                         }
 
@@ -144,6 +155,9 @@ namespace Lab1
                         break;
 
                     case 4:
+                        string password;
+                        bool uppers = false, lowers = false, digits = false, specials = false;
+
                         //UX Instructions
                         Console.WriteLine("User has selected (4)!\n");
                         Console.WriteLine("----------------------\n" +
@@ -157,62 +171,57 @@ namespace Lab1
 
                         //Input
                         Console.WriteLine("Please type a password, then press 'enter' to test the passwrod...");
-                        string password = Console.ReadLine();
+                        password = Console.ReadLine();
 
                         //Output
-                        Console.WriteLine("\n---------------\nResults:\n");
-
-                        int uppers = 0, lowers = 0, digits = 0, specials = 0;
+                        Console.WriteLine("\n---------------\nResults:");
 
                         for (int i = 0; i < password.Length; i++)
                         {
                             if (Char.IsUpper(password[i]))
-                                uppers++;
+                                uppers = true;
                             if (Char.IsLower(password[i]))
-                                lowers++;
+                                lowers = true;
                             if (Char.IsDigit(password[i]))
-                                digits++;
+                                digits = true;
                             if ("!@#$%^&*()+=_-{}[]:;\"'?<>,.".Contains("" + password[i]))
-                                specials++;
+                                specials = true;
                         }
 
-                        bool valid = true;
-
-                        if (password.Length < 6 || password.Length > 15)
-                        {
-                            Console.WriteLine("Entered password length is not between 6 & 15!");
-                            valid = false;
-                        }
-                        if (uppers == 0)
-                        {
-                            Console.WriteLine("Entered password does not contain an uppercase letter!");
-                            valid = false;
-                        }
-                        if (lowers == 0)
-                        {
-                            Console.WriteLine("Entered password does not contain a lowercase letter!");
-                            valid = false;
-                        }
-                        if (digits == 0)
-                        {
-                            Console.WriteLine("Entered password does not contain a digit!");
-                            valid = false;
-                        }
-                        if (specials == 0)
-                        {
-                            Console.WriteLine("Entered password does not contain a special character!");
-                            valid = false;
-                        }
-                        if (valid)
+                        if (uppers && lowers && digits && specials && password.Length >= 6 && password.Length <=15)
                             Console.WriteLine("Entered password is valid!\n");
                         else
-                            Console.WriteLine("Entered password is NOT valid!\n");
+                            Console.WriteLine("Entered password is NOT valid!\nReasons:\n");
+
+                        if (password.Length < 6 || password.Length > 15)
+                            Console.WriteLine("\tEntered password length is not between 6 & 15!");
+                        
+                        if (uppers == false)
+                            Console.WriteLine("\tEntered password does not contain an uppercase letter!");
+                        
+                        if (lowers == false)
+                            Console.WriteLine("\tEntered password does not contain a lowercase letter!");
+                        
+                        if (digits == false)
+                            Console.WriteLine("\tEntered password does not contain a digit!");
+                        
+                        if (specials == false)
+                            Console.WriteLine("\tEntered password does not contain a special character!");
                         
                         break;
 
                     case 5:
-                        
-                        
+
+                        Console.WriteLine("User has selected (5)!\n");
+                        Console.WriteLine("----------------------\n" +
+                            "-Comments about this lab and how easy/hard/appropriate I found it for this course as a first lab.\n\n" +
+                            "For a first lab and as an introduction to C#," +
+                            "it was nice to have a basic assignment with enough difficulty to experience the language for the first time.\n" +
+                            "This assignment allowed me to get use to the slight differences of C# and C++ while engaging in its familiarity.\n" +
+                            "Parts 1 and 2 were very similar and allowed me to understand inputs/outputs for C#.\n" +
+                            "Part 3 taught me how to use convert features, and part 4 taught me how to test throuhg strings.\n" +
+                            "I enjoyed this assignment and found it appropriate for the first lab.\n" +
+                            "-Alexander Harmaty");
 
                         break;
 
@@ -221,6 +230,10 @@ namespace Lab1
                         Console.WriteLine("User has selected (6)!\nEnd Of Program.");
                         Console.WriteLine("--------------------------------------------------------------------------------------------");
                         loop = false;
+
+                        break;
+
+                    default:
 
                         break;
                 }
