@@ -37,7 +37,7 @@ namespace Lab1
                             "To display the triangle, the user must:\n" +
                             "\tenter a character to form the triangle with,\n" +
                             "\tAND\n" +
-                            "\tenter an integer for the size of the triangle...\n");
+                            "\tenter an integer for the size of the triangle.\n");
 
                         //Input
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
@@ -74,7 +74,7 @@ namespace Lab1
                             "To display the diamond, the user must:\n" +
                             "\tenter a character to form the diamond with,\n" +
                             "\tAND\n" +
-                            "\tenter an integer for the half-point size of the diamond...\n");
+                            "\tenter an integer for the half-point size of the diamond.\n");
 
                         //Input
                         Console.WriteLine("Please type a character, then press 'enter' to select your choice...");
@@ -120,14 +120,99 @@ namespace Lab1
                         break;
 
                     case 3:
+                        //UX Instructions
+                        Console.WriteLine("User has selected (3)!\n");
+                        Console.WriteLine("----------------------\n" +
+                            "To display the mirrored number, the user must enter a string of numbers for the program to reflect.\n" +
+                            "For example, if the user entered '123' , the program will display '123321'\n");
+
+                        //Input
+                        Console.WriteLine("Please type an integer, then press 'enter' to select your choice... ");
+                        int num = Convert.ToInt32(Console.ReadLine());
+
+                        //Output
+                        string mirror = "" + num;
+
+                        while (num > 0)
+                        {
+                            mirror += (num % 10);
+                            num /= 10;
+                        }
+
+                        Console.WriteLine("----------------------\nResults:\n\n" + mirror);
 
                         break;
 
                     case 4:
+                        //UX Instructions
+                        Console.WriteLine("User has selected (4)!\n");
+                        Console.WriteLine("----------------------\n" +
+                            "For a password to be validated, it must meet ALL of the following requirements:\n" +
+                            "\tPassword length must be between 6 and 15 characters,\n" +
+                            "\tPassword must contain at lease one uppercase letter (A-Z),\n" +
+                            "\tPassword must contain at least one lowercase letter (a-z),\n" +
+                            "\tPassword must contain at least one digit (0-9),\n" +
+                            "\tPassword must contain at least one of the following speacial characters:\n" +
+                            "\t\t! @ # S % ^ & * ( ) + = _ - { } [ ] : ; \" ' ? < > , .\n");
 
+                        //Input
+                        Console.WriteLine("Please type a password, then press 'enter' to test the passwrod...");
+                        string password = Console.ReadLine();
+
+                        //Output
+                        Console.WriteLine("\n---------------\nResults:\n");
+
+                        int uppers = 0, lowers = 0, digits = 0, specials = 0;
+
+                        for (int i = 0; i < password.Length; i++)
+                        {
+                            if (Char.IsUpper(password[i]))
+                                uppers++;
+                            if (Char.IsLower(password[i]))
+                                lowers++;
+                            if (Char.IsDigit(password[i]))
+                                digits++;
+                            if ("!@#$%^&*()+=_-{}[]:;\"'?<>,.".Contains("" + password[i]))
+                                specials++;
+                        }
+
+                        bool valid = true;
+
+                        if (password.Length < 6 || password.Length > 15)
+                        {
+                            Console.WriteLine("Entered password length is not between 6 & 15!");
+                            valid = false;
+                        }
+                        if (uppers == 0)
+                        {
+                            Console.WriteLine("Entered password does not contain an uppercase letter!");
+                            valid = false;
+                        }
+                        if (lowers == 0)
+                        {
+                            Console.WriteLine("Entered password does not contain a lowercase letter!");
+                            valid = false;
+                        }
+                        if (digits == 0)
+                        {
+                            Console.WriteLine("Entered password does not contain a digit!");
+                            valid = false;
+                        }
+                        if (specials == 0)
+                        {
+                            Console.WriteLine("Entered password does not contain a special character!");
+                            valid = false;
+                        }
+                        if (valid)
+                            Console.WriteLine("Entered password is valid!\n");
+                        else
+                            Console.WriteLine("Entered password is NOT valid!\n");
+                        
                         break;
 
                     case 5:
+                        
+                        
 
                         break;
 
