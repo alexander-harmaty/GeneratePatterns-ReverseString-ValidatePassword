@@ -1,4 +1,4 @@
-# PatternGenerator-ReverseString-ValidatePassword
+# GeneratePatterns-ReverseString-ValidatePassword
 This project was one of the first assignments for my C# programming class (BCS-426-Lab1) at Farmingdale State College. 
 The goal of this assignment was for students to get an introduction to C# and ASP.NET, 
 so we were prompted to generate and spot patterns in strings according to specifications. 
