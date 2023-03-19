@@ -66,6 +66,4 @@ The program prompts the user to enter a password, and then validates the passwor
 
 ### Option 5
 
-![option5](images/carbon(5).png)
-
 The program displays comments about the lab and how appropriate it was as a first lab for learning C#.
