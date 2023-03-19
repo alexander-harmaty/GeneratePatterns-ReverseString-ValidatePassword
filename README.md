@@ -35,7 +35,7 @@ The program includes five options:
 
 ### Option 1
 
-![option1](images/carbon (1).png)
+![option1](images/carbon(1).png)
 
 The program prompts the user to enter a character and an integer, and then displays a triangle made of the given character to the given size.
 
