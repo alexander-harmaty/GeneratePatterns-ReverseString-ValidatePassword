@@ -69,9 +69,10 @@ Output:
 
 ### Option 4
 
-![option4](images/carbon(4).png)
-
 This case prompts the user to enter a password and then checks if the password meets certain requirements (length between 6 and 15 characters, at least one uppercase letter, at least one lowercase letter, at least one digit, and at least one special character). The program uses a for loop to iterate through each character in the password string and sets boolean variables accordingly. If the password meets all the requirements, the program outputs a message saying the entered password is valid. If not, the program outputs a message with the reasons why the password is not valid.
+
+Output:
+![option4](images/carbon(4).png)
 
 ### Option 5
 
