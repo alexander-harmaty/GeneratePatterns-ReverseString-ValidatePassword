@@ -42,28 +42,41 @@ The program ends when the user selects the option to exit.
 
 ### Option 1
 
-![option1](images/carbon(1).png)
+![option1code](images/carbon(1a).png)
 
-The program prompts the user to enter a character and an integer, and then displays a triangle made of the given character to the given size.
+This case prompts the user to enter a character and an integer for the size of the triangle. It then uses nested for loops to print a triangle of the given character to the given size. The outer loop controls the number of lines to print and the inner loops control the spaces and the character to print on each line.
+
+Output:
+![option1output](images/carbon(1).png)
 
 ### Option 2
 
-![option2](images/carbon(2).png)
+![option2code](images/carbon(2a).png)
 
-The program prompts the user to enter a character and an integer, and then displays a diamond made of the given character to the given size.
+This case prompts the user to enter a character and an integer for the half-point size of the diamond. It then uses nested for loops to print a diamond of the given character to the given size. The first half of the diamond is printed using the same logic as in Case 1, and then the second half of the diamond is printed using a similar nested loop with decreasing spaces and increasing characters.
+
+Output:
+![option2output](images/carbon(2).png)
 
 ### Option 3
 
-![option3](images/carbon(3).png) 
+![option3code](images/carbon(3a).png) 
 
-The program prompts the user to enter an integer, and then displays the entered number followed by its reverse.
+This case prompts the user to enter a number and then uses a while loop to reverse the entered number and store it in a string variable. The program then outputs the entered number followed by its reverse to the console.
+
+Output:
+![option3output](images/carbon(3).png) 
 
 ### Option 4
 
 ![option4](images/carbon(4).png)
 
-The program prompts the user to enter a password, and then validates the password based on several criteria.
+This case prompts the user to enter a password and then checks if the password meets certain requirements (length between 6 and 15 characters, at least one uppercase letter, at least one lowercase letter, at least one digit, and at least one special character). The program uses a for loop to iterate through each character in the password string and sets boolean variables accordingly. If the password meets all the requirements, the program outputs a message saying the entered password is valid. If not, the program outputs a message with the reasons why the password is not valid.
 
 ### Option 5
 
-The program displays comments about the lab and how appropriate it was as a first lab for learning C#.
+This case simply outputs my thoughts on the lab as requested by the professor. These include how appropriate it was for a first lab and what I learned from it.
+
+### Option 6
+
+This case simply outputs a message indicating that the program will end and sets the loop variable to false, which will cause the program to exit the while loop and terminate.
