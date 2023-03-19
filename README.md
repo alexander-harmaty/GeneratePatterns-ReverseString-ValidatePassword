@@ -12,7 +12,7 @@ This project was one of the first assignments for my C# programming class.
 
 The goal of this assignment was for students to get an introduction to C# and ASP.NET, so we were prompted to add four specific features exploring strings and patterns. 
 
-We were expected to be able to generate two different patterns based on user input, reverse a string provided by the user, or validate a given password to assure it meets the requirements.
+We were expected to be able to generate two different patterns based on user input, reverse a string provided by the user, and validate a given password to assure it meets the requirements.
 
 This was a solo assignment made with C# and ASP.NET using Visual Studio 2022.
 
