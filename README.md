@@ -37,7 +37,7 @@ Then, the program enters a loop that displays a menu of options and prompts the 
 
 The program then uses a switch statement to perform the selected task.
 
-This switch statement is nested within a loop, which runs the program until the user selects the option to exit.
+The program ends when the user selects the option to exit.
 
 
 ### Option 1
