@@ -2,9 +2,9 @@
 
 (FSC-BCS-426-Lab1)
 
-## Output
+## Output Menu
 
-![Output](images/carbon.png)
+![Menu](images/carbon.png)
 
 ## Assignment Context
 
@@ -32,7 +32,12 @@ The program includes five options:
 * (4) to validate a password, and 
 * (5) to provide comments about the lab. 
 
-For option 1, the program prompts the user to enter a character and an integer, and then displays a triangle made of the given character to the given size.
+
+### Option 1
+
+![option1](images/carbon (1).png)
+
+The program prompts the user to enter a character and an integer, and then displays a triangle made of the given character to the given size.
 
 For option 2, the program prompts the user to enter a character and an integer, and then displays a diamond made of the given character to the given size.
 
