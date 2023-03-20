@@ -42,16 +42,12 @@ The program ends when the user selects the option to exit.
 
 ### Option 1
 
-![option1code](images/carbon(1a).png)
-
-This case prompts the user to enter a character and an integer for the size of the triangle. It then uses nested for loops to print a triangle of the given character to the given size. The outer loop controls the number of lines to print and the inner loops control the spaces and the character to print on each line.
+This case prompts the user to enter a character and an integer for the size of the triangle. It then uses nested for loops to print a triangle of the given character to the given size. The outer loop controls the number of lines to print and the inner loops control the spaces and the character to print on each line. The program accomplishes this by first printing a line with spaces and a single instance of the given character, then progressively increasing the number of characters on each subsequent line while decreasing the number of spaces.
 
 Output:
 ![option1output](images/carbon(1).png)
 
 ### Option 2
-
-![option2code](images/carbon(2a).png)
 
 This case prompts the user to enter a character and an integer for the half-point size of the diamond. It then uses nested for loops to print a diamond of the given character to the given size. The first half of the diamond is printed using the same logic as in Case 1, and then the second half of the diamond is printed using a similar nested loop with decreasing spaces and increasing characters.
 
@@ -60,9 +56,7 @@ Output:
 
 ### Option 3
 
-![option3code](images/carbon(3a).png) 
-
-This case prompts the user to enter a number and then uses a while loop to reverse the entered number and store it in a string variable. The program then outputs the entered number followed by its reverse to the console.
+This case prompts the user to enter a string of numbers, which is converted to an integer using Convert.ToInt32(). The program then uses a while loop to reverse the entered number by repeatedly getting the remainder of the number divided by 10 and adding it to the end of a string variable. The number is then divided by 10 to remove the last digit and the process is repeated until the number is reduced to 0. Finally, the program outputs the entered number followed by its reverse to the console.
 
 Output:
 ![option3output](images/carbon(3).png) 
